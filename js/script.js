@@ -4,4 +4,4 @@ const leftBorderWidth = 1;
 number = 10;
 console.log(number);
 
-leftBorderWidth = 12;
+//leftBorderWidth = 12;  //mistake
