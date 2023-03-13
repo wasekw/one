@@ -102,3 +102,29 @@ console.log(person['name']);  // Lida
 const arr = ['plum.jpg', 6, 'orange.bmp', [2, 55], 'apple.png', {a: 'string', v: 'zero'}];
 console.log(arr[3][1]);  // 55
 console.log(typeof(arr)); // object
+
+//=========================================================================================================
+const arr1 = [1, 2, 3];
+arr1[10] = 333;
+
+console.log(arr1); // [ 1, 2, 3, <7 empty items>, 333 ]
+const arrObj = {'0': 1, '1': 2, '2': 3};
+
+console.log(arr1[1]);
+console.log(arrObj[0]);
+
+arrObj.b = true;
+
+console.log(arrObj.b); // true
+//console.log(arrObj[b]); //  ReferenceError: b is not defined  // const b = 'b'; то не буде помилки.
+console.log(arrObj['b']);
+//const obj = {a: 1, b: 2};
+
+const obj = {
+    'Anna': 300,
+    'Danial': 333
+}
+
+//===========================================================================================
+
+alert('Hello!');
