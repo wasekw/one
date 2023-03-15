@@ -150,10 +150,39 @@ console.log(typeof(null)); // object
 
 //================================================================================================================
 
-const category = 'toys';
+// const category = 'toys';
 
-console.log('https://someurl.com/' + category); // https://someurl.com/toys
-console.log(`https://someurl.com/${category}`); // https://someurl.com/toys
+// console.log('https://someurl.com/' + category); // https://someurl.com/toys
+// console.log(`https://someurl.com/${category}`); // https://someurl.com/toys
 
-const user = 'Vasek';
-alert(`Hello ${user}`);
+// const user = 'Vasek';
+// alert(`Hello ${user}`);
+
+//=============================================================================================================
+
+console.log('arr' + ' - object');  // arr - object
+console.log('arr' + +'- object'); // arrNaN
+console.log(4 + +'5'); // 9
+console.log(4 + +' - object');  // NaN
+
+let incr = 10;
+let decr = 10;
+
+incr++;
+decr--;
+
+console.log(incr); // 11
+console.log(decr); // 9
+
+console.log(5 % 2); // 1
+console.log(4 * 2 == 8); // true
+console.log(4 * 2 == '8'); // true
+console.log(4 * 2 === '8'); // false 
+
+const isChecked = true;
+const isClosed = false;
+
+console.log(isChecked && isClosed); // false
+console.log(isChecked || isClosed); // true
+
+//=============================================================================================================================
