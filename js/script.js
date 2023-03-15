@@ -186,3 +186,15 @@ console.log(isChecked && isClosed); // false
 console.log(isChecked || isClosed); // true
 
 //=============================================================================================================================
+
+// git log --pretty=oneline
+// git log --pretty=oneline --max-count=2
+// git log --pretty=oneline --since='5 minutes ago'
+// git log --pretty=oneline --until='5 minutes ago'
+// git log --pretty=oneline --author=<your name>
+// git log --pretty=oneline --all
+// git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+// git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+// git config --global alias.type 'cat-file -t'
+// git config --global alias.dump 'cat-file -p'
+// git tag v1
