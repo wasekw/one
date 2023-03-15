@@ -65,27 +65,27 @@ console.log('Ширина кузова автомобиля: ' + carBodyWidth + 
 // BigInt(Number.MAX_SAFE_INTEGER) + 2n;
 // // → 9_007_199_254_740_993n
 
-(7 + 6 - 5) * 4 ** 3 / 2 % 3;
-// → 1
-(7n + 6n - 5n) * 4n ** 3n / 2n % 3n;
-// → 1n
+// (7 + 6 - 5) * 4 ** 3 / 2 % 3;
+// // → 1
+// (7n + 6n - 5n) * 4n ** 3n / 2n % 3n;
+// // → 1n
 
-BigInt(123);
-// → 123n
-BigInt(1.5);
-// → RangeError
-BigInt('1.5');
-// → SyntaxError
+// BigInt(123);
+// // → 123n
+// BigInt(1.5);
+// // → RangeError
+// BigInt('1.5');
+// // → SyntaxError
 
 //===============================================================================
 
 // let number = 9.887;
-console.log(4 / 0);  // Infinity
-console.log(-3 / 0); // -Infinity
-console.log('first' * 2); // NaN
+// console.log(4 / 0);  // Infinity
+// console.log(-3 / 0); // -Infinity
+// console.log('first' * 2); // NaN
 
-let und;
-console.log(und); // undefined
+// let und;
+// console.log(und); // undefined
 // console.log(first);  // ReferenceError: first is not defined
 
 const person = {
@@ -99,32 +99,61 @@ const person = {
 console.log(person['name']);  // Lida
 
 
-const arr = ['plum.jpg', 6, 'orange.bmp', [2, 55], 'apple.png', {a: 'string', v: 'zero'}];
-console.log(arr[3][1]);  // 55
-console.log(typeof(arr)); // object
+// const arr = ['plum.jpg', 6, 'orange.bmp', [2, 55], 'apple.png', {a: 'string', v: 'zero'}];
+// console.log(arr[3][1]);  // 55
+// console.log(typeof(arr)); // object
 
 //=========================================================================================================
-const arr1 = [1, 2, 3];
-arr1[10] = 333;
+// const arr1 = [1, 2, 3];
+// arr1[10] = 333;
 
-console.log(arr1); // [ 1, 2, 3, <7 empty items>, 333 ]
-const arrObj = {'0': 1, '1': 2, '2': 3};
+// console.log(arr1); // [ 1, 2, 3, <7 empty items>, 333 ]
+// const arrObj = {'0': 1, '1': 2, '2': 3};
 
-console.log(arr1[1]);
-console.log(arrObj[0]);
+// console.log(arr1[1]);
+// console.log(arrObj[0]);
 
-arrObj.b = true;
+// arrObj.b = true;
 
-console.log(arrObj.b); // true
-//console.log(arrObj[b]); //  ReferenceError: b is not defined  // const b = 'b'; то не буде помилки.
-console.log(arrObj['b']);
-//const obj = {a: 1, b: 2};
+// console.log(arrObj.b); // true
+// //console.log(arrObj[b]); //  ReferenceError: b is not defined  // const b = 'b'; то не буде помилки.
+// console.log(arrObj['b']);
+// //const obj = {a: 1, b: 2};
 
-const obj = {
-    'Anna': 300,
-    'Danial': 333
-}
+// const obj = {
+//     'Anna': 300,
+//     'Danial': 333
+// };
 
 //===========================================================================================
 
-alert('Hello!');
+// alert('Hello!');
+
+// const result = confirm('Are you living in Ukraine?');
+// console.log(result); // Якщо нажав кнопку ОК то вертає true. 
+// Якщо нажав кнопку Отмена то вертає false
+
+// const result = prompt('What is your name?', '');
+// console.log(result); // В строку для ввода ввели Vasek то в result отримаємо Vasek.
+// Якщо відміна то отримуєм null
+// Завжди отримуэм тип донних строка string
+
+// document.write('Hi a deleted All on your page!');
+const answers = [];
+
+// answers[0] = prompt('What is your name?', '');
+// answers[1] = prompt('What is your surname?', '');
+// answers[2] = prompt('How old are you?', '');
+
+console.log(typeof(answers));  // object
+console.log(typeof(null)); // object
+
+//================================================================================================================
+
+const category = 'toys';
+
+console.log('https://someurl.com/' + category); // https://someurl.com/toys
+console.log(`https://someurl.com/${category}`); // https://someurl.com/toys
+
+const user = 'Vasek';
+alert(`Hello ${user}`);
