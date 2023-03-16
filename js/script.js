@@ -198,3 +198,27 @@ console.log(isChecked || isClosed); // true
 // git config --global alias.type 'cat-file -t'
 // git config --global alias.dump 'cat-file -p'
 // git tag v1
+
+//======================================================================================================
+
+// git remote add origin <адрес репозитория на github> добавляем новий проект в репозиторий на гитхабе
+// git branch -M main - переименовиваем ветку мастер на мейн master -->  main
+// git push -u origin main - отправляем свой новий проект на гитхаб
+
+//=========================================================================================================
+
+//GET / HTTP/1.1
+//Host: developer.mozilla.org
+//Accept-Language: fr
+
+//Читает ответ от сервера:
+//HTTP/1.1 200 OK
+//Date: Sat, 09 Oct 2010 14:28:02 GMT
+//Server: Apache
+//Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+//ETag: "51142bc1-7449-479b075b2891b"
+//Accept-Ranges: bytes
+//Content-Length: 29769
+//Content-Type: text/html
+
+//<!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
