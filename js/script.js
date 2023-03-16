@@ -34,15 +34,15 @@
 
 //==========================================================================================================
 
-const a = 5000;
-const b = 4000;
+// const a = 5000;
+// const b = 4000;
 
-console.log('Ширина кузова автомобиля: ' + a + ', a висота кузова автомобиля: ' + b);
+// console.log('Ширина кузова автомобиля: ' + a + ', a висота кузова автомобиля: ' + b);
 
-const carBodyWidth =  5000;
-const carBodyLength = 4000;
+// const carBodyWidth =  5000;
+// const carBodyLength = 4000;
 
-console.log('Ширина кузова автомобиля: ' + carBodyWidth + ', a висота кузова автомобиля: ' + carBodyLength);
+// console.log('Ширина кузова автомобиля: ' + carBodyWidth + ', a висота кузова автомобиля: ' + carBodyLength);
 
 // Request
 // data
@@ -88,15 +88,15 @@ console.log('Ширина кузова автомобиля: ' + carBodyWidth + 
 // console.log(und); // undefined
 // console.log(first);  // ReferenceError: first is not defined
 
-const person = {
-    name: 'Lida',
-    age: 33,
-    isMerried: false,
-};
+// const person = {
+//     name: 'Lida',
+//     age: 33,
+//     isMerried: false,
+// };
 
 // console.log(person.name);  // Lida
 // console.log(person[name]);  // ReferenceError: name is not defined
-console.log(person['name']);  // Lida
+// console.log(person['name']);  // Lida
 
 
 // const arr = ['plum.jpg', 6, 'orange.bmp', [2, 55], 'apple.png', {a: 'string', v: 'zero'}];
@@ -139,14 +139,14 @@ console.log(person['name']);  // Lida
 // Завжди отримуэм тип донних строка string
 
 // document.write('Hi a deleted All on your page!');
-const answers = [];
+// const answers = [];
 
 // answers[0] = prompt('What is your name?', '');
 // answers[1] = prompt('What is your surname?', '');
 // answers[2] = prompt('How old are you?', '');
 
-console.log(typeof(answers));  // object
-console.log(typeof(null)); // object
+// console.log(typeof(answers));  // object
+// console.log(typeof(null)); // object
 
 //================================================================================================================
 
@@ -160,30 +160,30 @@ console.log(typeof(null)); // object
 
 //=============================================================================================================
 
-console.log('arr' + ' - object');  // arr - object
-console.log('arr' + +'- object'); // arrNaN
-console.log(4 + +'5'); // 9
-console.log(4 + +' - object');  // NaN
+// console.log('arr' + ' - object');  // arr - object
+// console.log('arr' + +'- object'); // arrNaN
+// console.log(4 + +'5'); // 9
+// console.log(4 + +' - object');  // NaN
 
-let incr = 10;
-let decr = 10;
+// let incr = 10;
+// let decr = 10;
 
-incr++;
-decr--;
+// incr++;
+// decr--;
 
-console.log(incr); // 11
-console.log(decr); // 9
+// console.log(incr); // 11
+// console.log(decr); // 9
 
-console.log(5 % 2); // 1
-console.log(4 * 2 == 8); // true
-console.log(4 * 2 == '8'); // true
-console.log(4 * 2 === '8'); // false 
+// console.log(5 % 2); // 1
+// console.log(4 * 2 == 8); // true
+// console.log(4 * 2 == '8'); // true
+// console.log(4 * 2 === '8'); // false 
 
-const isChecked = true;
-const isClosed = false;
+// const isChecked = true;
+// const isClosed = false;
 
-console.log(isChecked && isClosed); // false
-console.log(isChecked || isClosed); // true
+// console.log(isChecked && isClosed); // false
+// console.log(isChecked || isClosed); // true
 
 //=============================================================================================================================
 
