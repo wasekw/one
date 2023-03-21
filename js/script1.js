@@ -317,193 +317,27 @@
 
 //================================================================================================
 
-/* Задание на урок:
+const str = 'test';
+const arr = [1, 2, 3]
+console.log(str.length);
+console.log(arr.length);
 
-1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
+console.log(str[2]);
+console.log(str.charAt(2));
 
-2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
-отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
-возвращаем пользователя к вопросам опять
+const fruit = 'Some fruit';
+console.log(fruit.indexOf('fruit')); // 5
+console.log(fruit.indexOf('q'));  // -1
 
-3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
-"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
-"Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
+const log = 'Hello world';
+console.log(log.slice(6));
+console.log(log.slice(6, 8));
+console.log(log.substring(6,10));
+console.log(log.substr(6, 3));
 
-4) Потренироваться и переписать цикл еще двумя способами*/
+const num = 12.7;
+console.log(Math.round(num));
 
-'use strict';
-
-// Код возьмите из предыдущего домашнего задания
-
-'use strict';
-
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-
-
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat:false
-};
-
-// for (let i = 0; i < 3; i++) {
-//     let film = prompt('Один из последних просмотренных фильмов?', '');
-//     if (film === '' || ratingFilm === '' || film === null || ratingFilm === null || film.length > 50) {
-//         i--;
-//     } else {
-//         let ratingFilm = prompt('На сколько оцените его?', '');
-//         personalMovieDB['movies'][film] = ratingFilm;
-//     }
-// }
-
-// let i = 0;
-// while(i < 3) {
-//     i++;
-//     let film = prompt('Один из последних просмотренных фильмов?', '');
-//     if (film === '' || ratingFilm === '' || film === null || ratingFilm === null || film.length > 50) {
-//         i--;
-//     } else {
-//         let ratingFilm = prompt('На сколько оцените его?', '');
-//         personalMovieDB['movies'][film] = ratingFilm;
-//     }
-// }
-
-// let i = 0;
-// do {
-//     i++;
-//     let film = prompt('Один из последних просмотренных фильмов?', '');
-//     let ratingFilm = prompt('На сколько оцените его?', '');
-//     if (film === '' || ratingFilm === '' || film === null || ratingFilm === null || film.length > 50) {
-//         i--;
-//     } else {
-//         personalMovieDB['movies'][film] = ratingFilm;
-//     }
-// } while(i < 3);
-
-// if (personalMovieDB.count < 10) {
-//     alert('Просмотрено довольно мало фильмов');
-// } else if (personalMovieDB.count < 30) {
-//     alert('Вы классический зритель');
-// } else if (personalMovieDB.count > 30) {
-//     alert('Вы киноман');
-// } else {
-//     alert('Произошла ошибка');
-// }
-
-
-// console.log(personalMovieDB);
-
-// FUNCTION=================================================================================
-
-// function showFirstMessage() {
-//     console.log('Hello World!');
-// }
-
-// showFirstMessage();
-
-// let num = 20;
-
-// function showFirstMessage(text) {
-//     console.log(text);
-//     num = 2;
-// }
-
-// showFirstMessage('Hello World!');
-// console.log(num); // 2
-
-// function showFirstMessage(text) {
-//     console.log(text);
-//     let num = 2;
-// }
-
-// showFirstMessage('Hello World!');
-// console.log(num); // 20
-
-// function calc(a, b) {
-//     return a + b;
-// }
-
-// console.log(calc(45, 77)) ;
-
-// function ret() {
-//     let num = 50;
-//     return num;
-// }
-
-// const anotherNum = ret();
-// console.log(anotherNum);
-
-// const logger = function() {
-//     console.log('I begin to logging your file.....')
-// };
-
-// logger();
-
-// const calc = (a, b) => a + b;
-
-// console.log(calc(12, 18));
-
-// const usdCurs = 38;
-// const evrCurs = 41;
-// const discount = 0.07;
-
-// function convert(amount, currs) {
-//     // console.log(currs * amount);
-//     return currs * amount;
-// }
-
-// function promotion(result) {
-//     console.log(result * discount);
-// }
-
-// // convert(300, usdCurs);
-// // convert(500, evrCurs);
-
-// promotion(convert(500, evrCurs));
-
-// function test() {
-//     for (let i = 0; i < 74; i++) {
-//         console.log(i);
-//         if (i === 3) {
-//             return;
-//         }
-//     }
-// }
-// console.log(test());
-
-// Место для первой задачи
-function sayHello(name) {
-    return `Привет, ${name}!`;
-}
-
-// Место для второй задачи
-function returnNeighboringNumbers(number) {
-    let array = [];
-    for (let i = number - 1; i < number + 2; i++) {
-        array.push(i);
-    }
-    return array;
-}
-
-// Место для третьей задачи
-function getMathResult(base, loop) {
-    if (typeof(loop) != 'number' || loop <= 0) {
-        return base;
-    }
-    let str = '';
-    let middleNum = base;
-    for (let i = 0; i < loop; i++) {
-        if (i + 1 < loop) {
-            str += base + '---';
-            base += middleNum;
-        } else {
-            str += base;
-        }
-    }
-    return str;
-}
-
-console.log(getMathResult(3, 5));
-console.log(getMathResult(20, -5));
+const test = '14.6px';
+console.log(parseInt(test, 10));
+console.log(parseFloat(test));
