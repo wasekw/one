@@ -317,27 +317,101 @@
 
 //================================================================================================
 
-const str = 'test';
-const arr = [1, 2, 3]
-console.log(str.length);
-console.log(arr.length);
+// const str = 'test';
+// const arr = [1, 2, 3];
+// console.log(str.length);
+// console.log(arr.length);
 
-console.log(str[2]);
-console.log(str.charAt(2));
+// console.log(str[2]);
+// console.log(str.charAt(2));
 
-const fruit = 'Some fruit';
-console.log(fruit.indexOf('fruit')); // 5
-console.log(fruit.indexOf('q'));  // -1
+// const fruit = 'Some fruit';
+// console.log(fruit.indexOf('fruit')); // 5
+// console.log(fruit.indexOf('q'));  // -1
 
-const log = 'Hello world';
-console.log(log.slice(6));
-console.log(log.slice(6, 8));
-console.log(log.substring(6,10));
-console.log(log.substr(6, 3));
+// const log = 'Hello world';
+// console.log(log.slice(6));
+// console.log(log.slice(6, 8));
+// console.log(log.substring(6,10));
+// console.log(log.substr(6, 3));
 
-const num = 12.7;
-console.log(Math.round(num));
+// const num = 12.7;
+// console.log(Math.round(num));
 
-const test = '14.6px';
-console.log(parseInt(test, 10));
-console.log(parseFloat(test));
+// const test = '14.6px';
+// console.log(parseInt(test, 10));
+// console.log(parseFloat(test));
+
+// let billion = 1e9;  // 1 миллиард, буквально: 1 и 9 нулей
+// console.log(0xff); // 255
+// console.log(0b11111111); // бинарная форма записи числа 255
+// console.log(0o377); // восьмеричная форма записи числа 255
+
+// let num = 255;
+
+// console.log(num.toString(16));  // ff
+// console.log(num.toString(2));   // 11111111
+// console.log(num.toString(5)); //2010
+// console.log(12345..toString(36)); // 9ix
+// console.log((123456).toString(36)); // 2n9c
+// console.log(1e500); // Infinity
+// console.log(0.1 + 0.2); // 0.30000000000000004
+
+// let sum = 0.1 + 0.2;
+// console.log(sum.toFixed(2)); // 0.30
+// console.log(typeof(sum.toFixed(2))); // string
+
+// console.log( isNaN(NaN) ); // true
+// console.log( isNaN('str') ); // true
+
+// console.log( isFinite('15') ); // true
+// console.log( isFinite('str') ); // false, потому что специальное значение: NaN
+// console.log( isFinite(Infinity) ); // false, потому что специальное значение: Infinity
+
+// console.log( NaN === NaN ); // false
+// console.log(NaN == NaN); // false
+
+// console.log( typeof(parseInt('100px')) ); // 100 // number
+// console.log( parseFloat('12.5em') ); // 12.5
+
+// console.log( parseInt('12.3') ); // 12, вернётся только целая часть
+// console.log( parseFloat('12.3.4') ); // 12.3, произойдёт остановка чтения на второй точке
+
+//===================================================================================================
+
+// let oneNumber = +prompt('Введіть просте число від 1 до 100', '');
+// let twoNumber = +prompt('Введіть просте число від 1 до 100', '');
+// alert(`Ви набрали сумму: ${oneNumber + twoNumber}`);
+
+// function readNumber() {
+//     for (let i = 0; i < 1; i++) {
+
+//         let num = +prompt('Введіть просте число.....', '');
+//         if (typeof(num) === 'number') {
+//             alert(num);
+//         } else if (num === '' || num === null) {
+//             alert('null');
+//         } else {
+//             i--;
+//         } 
+//     }
+// }
+
+// readNumber();
+
+/* Задание на урок:
+
+1) Первую часть задания повторить по уроку
+
+2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
+false - выводит в консоль главный объект программы
+
+3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
+"Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+genres
+
+P.S. Функции вызывать не обязательно*/
+
+'use strict';
+
+// Код возьмите из предыдущего домашнего задания
