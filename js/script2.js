@@ -52,3 +52,46 @@
 //     html.style.color = textColor;
 //   }
 // }
+
+//====================================================================================================
+
+// Место для первой задачи
+// function calculateVolumeAndArea(side) {
+//     if (typeof(side) !== 'number' || side < 0 || side != Math.floor(side)) {
+//         return 'При вычислении произошла ошибка';
+//     }
+//     let volume = side * side * side;
+//     let area = side * side * 6;
+//     return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+// }
+
+
+// // Место для второй задачи
+// function getCoupeNumber(num) {
+//     if (typeof (num) !== 'number' || num < 0 || !Number.isInteger(num)) {
+//         return 'Ошибка. Проверьте правильность введенного номера места';
+//     }
+
+//     if (num === 0 || num > 36) {
+//         return 'Таких мест в вагоне не существует';
+//     }
+
+//     return Math.ceil(num / 4);
+// }
+
+//=================================================================================================
+
+// Место для первой задачи
+function getTimeFromMinutes(minute) {
+    let hour = minute / 60;
+    if (typeof(minute) != 'number' || minute != Math.floor(minute) || minute < 0) {
+        return 'Ошибка, проверьте данные';
+    }
+} 
+
+
+
+// Место для второй задачи
+function findMaxNumber() {
+
+}
