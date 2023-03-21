@@ -314,3 +314,30 @@
 //     result += '\n';
 // }
 // console.log(result);
+
+//================================================================================================
+
+const str = 'test';
+const arr = [1, 2, 3]
+console.log(str.length);
+console.log(arr.length);
+
+console.log(str[2]);
+console.log(str.charAt(2));
+
+const fruit = 'Some fruit';
+console.log(fruit.indexOf('fruit')); // 5
+console.log(fruit.indexOf('q'));  // -1
+
+const log = 'Hello world';
+console.log(log.slice(6));
+console.log(log.slice(6, 8));
+console.log(log.substring(6,10));
+console.log(log.substr(6, 3));
+
+const num = 12.7;
+console.log(Math.round(num));
+
+const test = '14.6px';
+console.log(parseInt(test, 10));
+console.log(parseFloat(test));
