@@ -123,28 +123,54 @@
 
 //=================================================================================================
 
-function fib(num) {
+// function fib(num) {
     
-    let firstNum = 0;
-    let secondNum = 1;
-    let answerStr = `${firstNum} ${secondNum} `;
+//     let firstNum = 0;
+//     let secondNum = 1;
+//     let answerStr = `${firstNum} ${secondNum} `;
     
-    if (num == 0 || typeof(num) !== 'number' || !Number.isInteger(num)) {
-        return '';
-    }  else if (num == 1) {
-        return '0';
-    }
+//     if (num == 0 || typeof(num) !== 'number' || !Number.isInteger(num)) {
+//         return '';
+//     }  else if (num == 1) {
+//         return '0';
+//     }
     
-    for (let i = 2; i < num; i++) {
-        secondNum = firstNum + secondNum;
-        firstNum = secondNum - firstNum;
-        if (i != num -1) {
-            answerStr += `${secondNum} `;
-        } else {
-            answerStr += `${secondNum}`;
-        } 
-    }
-    return answerStr;
+//     for (let i = 2; i < num; i++) {
+//         secondNum = firstNum + secondNum;
+//         firstNum = secondNum - firstNum;
+//         if (i != num -1) {
+//             answerStr += `${secondNum} `;
+//         } else {
+//             answerStr += `${secondNum}`;
+//         } 
+//     }
+//     return answerStr;
+// }
+
+// console.log(fib(22));
+
+//==================================================================================================
+function first() {
+    //Do something.....
+    setTimeout(function() {
+        console.log(1);
+    }, 500);
 }
 
-console.log(fib(22));
+function second() {
+    console.log(2);
+}
+
+first();
+second();
+
+function learnJS(lang, callback) {
+    console.log(`Я учу ${lang}`);
+    callback();
+}
+
+function done() {
+    console.log('Я прошел этот урок');
+}
+
+learnJS('JavaScript', done);
