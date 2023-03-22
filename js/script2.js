@@ -82,16 +82,69 @@
 //=================================================================================================
 
 // Место для первой задачи
-function getTimeFromMinutes(minute) {
-    let hour = minute / 60;
-    if (typeof(minute) != 'number' || minute != Math.floor(minute) || minute < 0) {
-        return 'Ошибка, проверьте данные';
+// function getTimeFromMinutes(minute) {
+//     let hour = Math.floor(minute / 60);
+//     if (typeof(minute) != 'number' || minute != Math.floor(minute) || minute < 0) {
+//         return 'Ошибка, проверьте данные';
+//     } else if (minute == 0) {
+//         return 'Это 0 часов и 0 минут';
+//     } else if (hour == 0 || hour == 5 || hour == 6 || hour == 7 || hour == 8 || hour == 9) {
+//         return `Это ${hour} часов и ${minute % 60} минут"`;
+//     } else if (hour == 1) {
+//         return `Это ${hour} час и ${minute % 60} минут`;
+//     } else {
+//         return `Это ${hour} часа и ${minute % 60} минут`;
+//     }
+// } 
+
+// console.log(getTimeFromMinutes(-150));
+// console.log(getTimeFromMinutes(0));
+// console.log(getTimeFromMinutes(150));
+// console.log(getTimeFromMinutes(50));
+
+
+// // Место для второй задачи
+// function findMaxNumber(...args) {
+//     // let maxNumber = args[0];
+
+//     for (let i = 0; i < args.length; i++) {
+       
+//         if (args.length < 4 || typeof(args[i]) !== 'number') {
+//             return 0;
+//         // } else if (args[i] > maxNumber) {
+//         //     maxNumber = args[i];
+//         } 
+//     }
+//     // return maxNumber;
+//     return Math.max(...args);
+// }
+
+// console.log(findMaxNumber(1, 5, 6.6, 11));
+
+//=================================================================================================
+
+function fib(num) {
+    
+    let firstNum = 0;
+    let secondNum = 1;
+    let answerStr = `${firstNum} ${secondNum} `;
+    
+    if (num == 0 || typeof(num) !== 'number' || !Number.isInteger(num)) {
+        return '';
+    }  else if (num == 1) {
+        return '0';
     }
-} 
-
-
-
-// Место для второй задачи
-function findMaxNumber() {
-
+    
+    for (let i = 2; i < num; i++) {
+        secondNum = firstNum + secondNum;
+        firstNum = secondNum - firstNum;
+        if (i != num -1) {
+            answerStr += `${secondNum} `;
+        } else {
+            answerStr += `${secondNum}`;
+        } 
+    }
+    return answerStr;
 }
+
+console.log(fib(22));
