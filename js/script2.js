@@ -150,27 +150,89 @@
 // console.log(fib(22));
 
 //==================================================================================================
-function first() {
-    //Do something.....
-    setTimeout(function() {
-        console.log(1);
-    }, 500);
-}
 
-function second() {
-    console.log(2);
-}
+//function first() {
+//    //Do something.....
+//    setTimeout(function() {
+//        console.log(1);
+//    }, 500);
+//}
 
-first();
-second();
+//function second() {
+//    console.log(2);
+//}
 
-function learnJS(lang, callback) {
-    console.log(`Я учу ${lang}`);
-    callback();
-}
+//first();
+//second();
 
-function done() {
-    console.log('Я прошел этот урок');
-}
+//function learnJS(lang, callback) {
+//    console.log(`Я учу ${lang}`);
+//    callback();
+//}
 
-learnJS('JavaScript', done);
+//function done() {
+//    console.log('Я прошел этот урок');
+//}
+
+//learnJS('JavaScript', done);
+
+//=====================================================================================================
+
+//const obj = new Object();
+
+//const options = {
+//    name: 'test',
+//    width: 1024,
+//    height: 1024,
+//    colors: {
+//        border: 'green',
+//        bg: 'red'
+//    },
+//    makeTest: function() {
+//        console.log('Test');
+//    }
+//}
+
+//const {border, bg} = options.colors;
+
+//console.log(border);
+
+//options.makeTest();
+//console.log(Object.keys(options).length);
+//console.log(options.colors.bg);
+//console.log(options['colors']['border']);
+
+//delete options.name;
+
+//let counter = 0;
+//for (let key in options) {
+//    if (typeof(options[key]) !== 'object') {
+//        console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//        counter++;
+//    } else {
+//        for (let i in options[key]) {
+//            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+//            counter++;
+//            }
+//    }
+//}
+//console.log(counter);
+   
+//====================================================================================================
+
+const arr = [1, 2, 3, 5, 8, 12];
+//arr.push(17, 5);
+//arr.pop();
+//console.log(arr);
+
+//for (let i= 0; i < arr.length; i++) {
+//    console.log(arr[i]);
+//}
+
+//for (let el of arr) {
+//    console.log(el);
+//}
+
+arr.forEach(function(el, index, array) {
+    console.log(`${index}: ${el} внутри массива ${array}`);
+})
