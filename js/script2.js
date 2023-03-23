@@ -377,25 +377,134 @@
 
 // log(...num);
 
-const men = {
-    name: 'Piter',
-    age: 45,
-    address: {
-        country: 'Ukraine',
-        town: 'Kropivnitsky',
-        street: 'Zurliva'
-    },
-    isMarried: true,
-    sayName: function() {
-        console.log(`Hello, my name is ${this.name}`);
-    }
-};
+// const men = {
+//     name: 'Piter',
+//     age: 45,
+//     address: {
+//         country: 'Ukraine',
+//         town: 'Kropivnitsky',
+//         street: 'Zurliva'
+//     },
+//     isMarried: true,
+//     sayName: function() {
+//         console.log(`Hello, my name is ${this.name}`);
+//     }
+// };
 
-const menCopy = {...men};
-menCopy.name = 'VAsek';
-menCopy.address.town = 'Kiev';
-console.log(menCopy);
-console.log(men);
+// const menCopy = {...men};
+// menCopy.name = 'VAsek';
+// menCopy.address.town = 'Kiev';
+// console.log(menCopy);
+// console.log(men);
 
 // menCopy.sayName();
 // men.sayName();
+
+//====================================================================================================
+
+// const personalPlanPeter = {
+//     name: 'Peter',
+//     age: '29',
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     },
+//     showAgeAndLangs: function(plan) {
+//         // return `Мне ${this.age} и я владею языками: ${this.skills.languages.map(el => el.toUpperCase())}`;
+//         const {age} = plan;
+//         const {languages} = plan.skills;
+//         let answer = `Мне ${age} и я владею языками: `;
+        
+//         languages.forEach(el => {
+//             answer += `${el.toUpperCase()} `;
+//         });
+//         return answer;
+//     }
+// };
+
+// function showExperience(plan) {
+// return plan.skills.exp;
+//     const {skills: {exp: expirience}} = plan;
+//     return expirience;
+// }
+
+// console.log(showExperience(personalPlanPeter));
+
+// function showProgrammingLangs(plan) {
+//     let answer = '';
+//     const {programmingLangs: lang} = plan.skills;
+//     for (let key in lang) {
+//         answer += `Язык ${key} изучен на ${lang[key]}\n`;
+//     }
+//     return answer.trim();
+// }
+
+// // console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
+// console.log(showProgrammingLangs(personalPlanPeter));  
+
+//===============================================================================================================
+
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//     let str = 'Семья состоит из: ';
+//     if (arr.length === 0) {
+//         return 'Семья пуста';
+//     } else {
+//         arr.forEach(el => {
+//             str += `${el} `;
+//         }); 
+//     }
+//     return str;
+// }
+
+// console.log(showFamily(family));
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+//     // let str = '';
+//     // arr.map(el => {
+//     //     str += `${el.toLowerCase()}\n`;
+//     // });
+//     // return str;
+
+//     arr.forEach(city => {
+//         console.log(city.toLowerCase());
+//     });
+// }
+
+// standardizeStrings(favoriteCities);
+
+//======================================================================================================================
+
+// const someString = 'This is some strange string';
+
+// function reverse(str) {
+//     if (typeof(str) !== 'string') {
+//         return "Ошибка!";
+
+//     return str.split('').reverse().join('');
+// }
+
+// console.log(reverse(someString)) ;
+
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+// const arrAllCurrencies = [...baseCurrencies, ...additionalCurrencies];
+
+// function availableCurr(arr, missingCurr) {
+//     let str = (arr.length === 0) ? 'Нет доступных валют' : 'Доступные валюты:\n';
+//     arr.filter(el => el !== missingCurr).forEach(el => {
+//             str += `${el}\n`;
+//         });
+//     return str;
+// }
+
+// console.log(availableCurr(arrAllCurrencies));
+
+//
