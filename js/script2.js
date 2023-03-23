@@ -220,7 +220,7 @@
    
 //====================================================================================================
 
-const arr = [1, 2, 3, 5, 8, 12];
+// const arr = [1, 2, 3, 5, 8, 12];
 //arr.push(17, 5);
 //arr.pop();
 //console.log(arr);
@@ -233,6 +233,169 @@ const arr = [1, 2, 3, 5, 8, 12];
 //    console.log(el);
 //}
 
-arr.forEach(function(el, index, array) {
-    console.log(`${index}: ${el} внутри массива ${array}`);
-})
+// arr.forEach(function(el, index, array) {
+//     console.log(`${index}: ${el} внутри массива ${array}`);
+// });
+
+//===================================================================================================
+
+// let obj = {
+//     a: 1,
+//     b: 2,
+// };
+// let objCopy = Object.assign({}, obj);
+  
+// console.log(objCopy); // результат - { a: 1, b: 2 }
+// objCopy.b = 89;
+// console.log(objCopy); // результат - { a: 1, b: 89 }
+// console.log(obj); // результат - { a: 1, b: 2 }
+
+// Object.assign делает только поверхностную копию. 
+
+// let obj = { 
+//     a: 1,
+//     b: { 
+//       c: 2,
+//     },
+//   }
+  
+//   let newObj = JSON.parse(JSON.stringify(obj));
+  
+//   obj.b.c = 20;
+//   console.log(obj); // { a: 1, b: { c: 20 } }
+//   console.log(newObj); // { a: 1, b: { c: 2 } } (Новый нетронутый объект!)
+
+// const array = [
+//     'a',
+//     'c',
+//     'd', {
+//         four: 4
+//     },
+// ];
+// const newArray = [...array];
+// console.log(newArray);
+// Result 
+// ["a", "c", "d", { four: 4 }]
+
+// let obj = {
+//     one: 1,
+//     two: 2,
+//   }
+  
+//   let newObj = { ...obj };
+
+// var parts = ['shoulders', 'knees'];
+// var lyrics = ['head', ...parts, 'and', 'toes'];
+// console.log(lyrics); // ["head", "shoulders", "knees", "and", "toes"]
+
+//=======================================================================================
+
+// let a = 5;
+// let b = a;
+// b = b + 5;
+// console.log(a); // 5
+// console.log(b); // 10
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj;
+
+// copy.a = 10;
+
+// console.log(obj); // { a: 10, b: 1 }
+// console.log(copy); //{ a: 10, b: 1 }
+
+//
+// function copy(mainObj) {
+//     let objCopy = {};
+
+//     for (let key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+//     return objCopy;
+// }
+
+// const mainObj = {
+//     name: 'Bob',
+//     age: 33,
+//     isMarried: false
+// };
+
+// copy(mainObj);
+
+// mainObj.name = 'Vasek';
+
+// console.log(mainObj);
+// console.log(objCopy);
+
+// const number ={
+//     a: 3, 
+//     b: 77,
+//     c: {
+//         d: 11,
+//         e: 33
+//     }
+// };
+
+// const copyObj = copy(number);
+
+// number.c.d = 22;
+// number.b = 55;
+// console.log(number);
+// console.log(copyObj);
+
+// const add = {
+//     f: 44,
+//     t: 14
+// };
+
+// const sumObj = Object.assign({}, number, add);
+// console.log(sumObj);
+
+// const oldArray = ['a', 'b', 'c', ['ff']];
+// const newArray = oldArray.slice();
+// newArray[3][0] = 'pop';
+// newArray[2] = 'hahahahah';
+// console.logblogs(oldArray); // [ 'a', 'b', 'c', [ 'pop' ] ]
+// console.log(newArray); // [ 'a', 'b', 'hahahahah', [ 'pop' ] ]
+
+// const vidio = ['youtube', 'vimio', 'rutube'];
+// const blogs = ['facebook', 'tweeter', 'viber', 'zoom'];
+// const social =[...vidio, ...blogs, 'pipe', 'whatsup'];
+// console.log(social);
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+
+// const num = [3, 7, 19];
+
+// log(...num);
+
+const men = {
+    name: 'Piter',
+    age: 45,
+    address: {
+        country: 'Ukraine',
+        town: 'Kropivnitsky',
+        street: 'Zurliva'
+    },
+    isMarried: true,
+    sayName: function() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
+
+const menCopy = {...men};
+menCopy.name = 'VAsek';
+menCopy.address.town = 'Kiev';
+console.log(menCopy);
+console.log(men);
+
+// menCopy.sayName();
+// men.sayName();
