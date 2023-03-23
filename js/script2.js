@@ -560,6 +560,16 @@ const shoppingMallData = {
 };
 
 function isBudgetEnough(data) {
-    
+    const {shops, height, moneyPer1m3, budget} = data;
+    const sqwera = shops.map(el => el.width * el.length).reduce((acc, el) => acc += el, 0);
+    const price = sqwera * height * moneyPer1m3;
+    if (price > budget) {
+        console.log('Бюджета недостаточно');
+    } else {
+        console.log('Бюджета достаточно');
+    }
 }
 
+isBudgetEnough(shoppingMallData);
+
+//====================================================================================================
