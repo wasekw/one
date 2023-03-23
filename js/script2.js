@@ -507,4 +507,59 @@
 
 // console.log(availableCurr(arrAllCurrencies));
 
-//
+//===========================================================================================================================
+
+// let str = 'some';
+// const newObj = new String(str);
+// console.log(newObj);
+// console.log(typeof(str));
+// console.log(typeof(newObj));
+
+// const soldge = {
+//     healse: 400,
+//     armor: 100,
+//     sayHello: function() {
+//         console.log('Hello');
+//     }
+// };
+
+// const john = Object.create(soldge);
+// john.healse = 100;
+
+// // john.__proto__ = soldge;
+// // Object.setPrototypeOf(john, soldge);
+
+// console.log(john.armor);
+// john.sayHello();
+// console.log(john);
+
+//======================================================================================================
+
+const shoppingMallData = {
+    shops: [
+        {
+            width: 10,
+            length: 5
+        },
+        {
+            width: 15,
+            length: 7
+        },
+        {
+            width: 20,
+            length: 5
+        },
+        {
+            width: 8,
+            length: 10
+        }
+    ],
+    height: 5,
+    moneyPer1m3: 30,
+    budget: 50000
+};
+
+function isBudgetEnough(data) {
+    
+}
+
