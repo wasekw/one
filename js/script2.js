@@ -535,41 +535,87 @@
 
 //======================================================================================================
 
-const shoppingMallData = {
-    shops: [
-        {
-            width: 10,
-            length: 5
-        },
-        {
-            width: 15,
-            length: 7
-        },
-        {
-            width: 20,
-            length: 5
-        },
-        {
-            width: 8,
-            length: 10
-        }
-    ],
-    height: 5,
-    moneyPer1m3: 30,
-    budget: 50000
-};
+// const shoppingMallData = {
+//     shops: [
+//         {
+//             width: 10,
+//             length: 5
+//         },
+//         {
+//             width: 15,
+//             length: 7
+//         },
+//         {
+//             width: 20,
+//             length: 5
+//         },
+//         {
+//             width: 8,
+//             length: 10
+//         }
+//     ],
+//     height: 5,
+//     moneyPer1m3: 30,
+//     budget: 50000
+// };
 
-function isBudgetEnough(data) {
-    const {shops, height, moneyPer1m3, budget} = data;
-    const sqwera = shops.map(el => el.width * el.length).reduce((acc, el) => acc += el, 0);
-    const price = sqwera * height * moneyPer1m3;
-    if (price > budget) {
-        console.log('Бюджета недостаточно');
-    } else {
-        console.log('Бюджета достаточно');
-    }
-}
+// function isBudgetEnough(data) {
+//     const {shops, height, moneyPer1m3, budget} = data;
+//     const sqwera = shops.map(el => el.width * el.length).reduce((acc, el) => acc += el, 0);
+//     const price = sqwera * height * moneyPer1m3;
+//     if (price > budget) {
+//         console.log('Бюджета недостаточно');
+//     } else {
+//         console.log('Бюджета достаточно');
+//     }
+// }
 
-isBudgetEnough(shoppingMallData);
+// isBudgetEnough(shoppingMallData);
 
 //====================================================================================================
+
+// const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+// function sortStudentsByGroups(arr) {
+
+//     arr.sort(); 
+//     const firstArr = [];
+//     const secondArr = [];
+//     const thirdArr = [];
+//     const rest = [];
+
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i < 3) {
+//             firstArr.push(arr[i]);
+//         } else if (i < 6) {
+//             secondArr.push(arr[i]);
+//         } else if (i < 9) {
+//             thirdArr.push(arr[i]);
+//         } else {
+//             rest.push(arr[i]);
+//         }
+//     }
+
+//     return [firstArr, secondArr, thirdArr, `Оставшиеся студенты: ${(rest.length === 0) ? '-' : rest.join(', ')}`];
+// }
+
+// console.log(sortStudentsByGroups(students));
+
+//==============================================================================================================================
+
+// console.log(typeof(String(null)));  // string
+
+// const num = 7;
+// console.log('https://google.com/catalog/' + num);
+// console.log(25 + 'px');
+
+// console.log(typeof(Number(true)));
+// console.log(typeof(+'77'));
+// console.log(typeof(parseInt('12.5px')));
+// console.log(parseInt('12.5px', 10)); // 12
+// console.log(parseFloat('12.5px')); // 12.5
+
+// 0, NaN, null, undefined, '', false
+// console.log(typeof(Boolean('')));
+// console.log(typeof(!!'hfksll'));
