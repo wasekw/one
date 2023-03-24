@@ -619,3 +619,24 @@
 // 0, NaN, null, undefined, '', false
 // console.log(typeof(Boolean('')));
 // console.log(typeof(!!'hfksll'));
+
+function createCounter() {
+    let counter = 0; debugger
+
+    const myfunction = function() {
+        counter = counter + 1;debugger
+        return counter; debugger
+    }
+
+    return myfunction;
+}
+
+let increament = createCounter();
+
+let c1 = increament();debugger
+let c2 = increament();debugger
+let c3 = increament();debugger
+
+console.log(c1, c2, c3); // 1, 2, 3
+
+
