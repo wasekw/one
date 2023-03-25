@@ -619,3 +619,90 @@
 // 0, NaN, null, undefined, '', false
 // console.log(typeof(Boolean('')));
 // console.log(typeof(!!'hfksll'));
+
+// =================================================================================================
+
+// let name = 'John';
+
+// function sayHi() {
+//     console.log('Hi, ' + name);
+// }
+// name = 'Pete';
+
+// sayHi(); 
+
+// function makeWorker() {
+//     let name = 'Pete';
+  
+//     return function() {
+//         console.log(name);
+//     };
+// }
+  
+// let name = 'John';
+  
+// // create a function
+// let work = makeWorker();
+  
+// // call it
+// work();
+
+// function Counter() {
+//     let count = 0;
+  
+//     this.up = function() {
+//         return ++count;
+//     };
+  
+//     this.down = function() {
+//         return --count;
+//     };
+// }
+  
+// let counter = new Counter
+// console.log( counter.up() ); // 1
+// console.log( counter.up() ); // 2
+// console.log( counter.down() ); // 1
+
+// let phrase = 'Hello';
+
+// if (true) {
+//     let user = 'John';
+
+//     function sayHi() {
+//         console.log(`${phrase}, ${user}`);
+//     }
+// }
+
+// sayHi();//Error
+
+// function sayHi() {
+//     console.log('Hi');
+  
+//     // давайте посчитаем, сколько вызовов мы сделали
+//     sayHi.counter++;
+// }
+// sayHi.counter = 0; // начальное значение
+  
+// sayHi(); // Hi
+// sayHi(); // Hi
+  
+// console.log(( `Вызвана ${sayHi.counter} раза` )); // Вызвана 2 раза
+
+
+// function makeCounter() {
+//     let count = 0;
+  
+//     function counter() {
+//         return count++;
+//     }
+  
+//     counter.set = value => count = value;
+  
+//     counter.decrease = () => count--;
+  
+//     return counter;
+// }
+
+// console.log([] + false - null + true); // NaN
+// console.log([] + 1 + 2); // '12'
