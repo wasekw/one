@@ -24,3 +24,12 @@ const movieDB = {
     ]
 };
 
+document.querySelector('.promo__adv').remove();
+document.querySelector('.promo__genre').textContent = 'ДРАМА';
+document.querySelector('.promo__bg').style.background = "url('../img/bg.jpg') center (center / cover) no-repeat";
+
+const film = document.querySelectorAll('.promo__interactive-item');
+
+film.forEach(el => {
+    el.textContent = movieDB
+})
