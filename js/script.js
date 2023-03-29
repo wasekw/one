@@ -1,4 +1,6 @@
 const btn = document.querySelector('#btn');
+const overlay = document.querySelector('.overlay');
+const btns = document.querySelectorAll('button');
 
 //btn.onclick = function() {
 //  alert('Click!!!');
@@ -22,9 +24,34 @@ const btn = document.querySelector('#btn');
 //  event.target.remove();
 //  //console.log('Hover');
 //});
-const deleteElement = (e) => {
-  e.target.remove();
-  console.log(e.target);
-}
 
-btn.addEventListener('click', deleteElement);
+// let i = 0;
+const deleteElement = (e) => {
+    // e.target.remove();
+
+    console.log(e.target);
+    console.log(e.currentTarget);
+    console.log(e.type);
+    // i++;
+    // if (i == 1) {
+    //     btn.removeEventListener('click', deleteElement);
+    // }
+
+};
+
+btn.addEventListener('click', deleteElement, {once: true});
+overlay.addEventListener('click', deleteElement, {once: true});
+
+// const link = document.querySelector('a');
+// link.addEventListener('click', (event) => {
+//     event.preventDefault();
+
+//     console.log(event.target);
+//     console.log(link.href);
+// });
+
+// btns.forEach(btn => {
+//     btn.addEventListener('click', (e) => {
+//         console.log(e.currentTarget);
+//     });
+// });
