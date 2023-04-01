@@ -1,14 +1,23 @@
-script.js
 'use strict';
 
-const box = document.querySelector('.box');
+//const box = document.querySelector('.box');
 
-const newHeight = 100;
-const newWidth = 400;
+//const newHeight = 110;
+//const newWidth = 400;
 
-function changeParams(elem, h, w) {
-    elem.style.height = `${h}px`;
-    elem.style.width = `${w}px`;
-}
+//function changeParams(elem, h, w) {
+//   // elem.style.height = `${h || 200}px`;
+//   // elem.style.width = `${w || 200}px`;
+//   elem.style.height = `${h ?? 200}px`;
+//   elem.style.width = `${w ?? 200}px`;
+//   elem.innerHTML = (h ?? 200) * (w ?? 200);
+//}
 
-changeParams(box, newHeight, newWidth);
+//changeParams(box, newHeight, newWidth);
+
+//let userName;
+//let userKey;
+
+//console.log(userName ?? userKey ?? 'User');
+
+//=================================================
