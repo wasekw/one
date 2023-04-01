@@ -165,13 +165,67 @@
 
 //=========== for of  ==========================================
 
-const user = {
-   name: 'Alex',
-   surName: 'Smith',
-   birthday: '20/04/1993',
-   showMyPublicData: function() {
-      console.log(`${this.name} ${this.surName}`);
-   }
-}
+//const user = {
+//   name: 'Alex',
+//   surName: 'Smith',
+//   birthday: '20/04/1993',
+//   showMyPublicData: function() {
+//      console.log(`${this.name} ${this.surName}`);
+//   }
+//}
 
-const arr = ['a', 'b', 'c'];
+//const arr = ['a', 'b', 'c'];
+//Array.prototype.someMethod = function() {};
+//const str = 'string';
+//for (let key in user) {
+//   console.log(user[key]);
+//}
+
+//for (let key in arr) {
+//   console.log(arr[key]);
+//}
+
+//for (let key in str) {
+//   console.log(str[key]);
+//}
+
+//for (let key of arr) {
+//   console.log(key);
+//}
+
+//const saleries = {
+//   john: 500, 
+//   ivan: 1000,
+//   ann: 5000,
+//   hello: function() {
+//      console.log('Hello');
+//   }
+//}
+
+//saleries[Symbol.iterator] = function() {
+//   return {
+//      current: this.john,
+//      last: this.ann,
+//      next() {
+//         if (this.current < this.last) {
+//            this.current += 500;
+//            return {done: false, value: this.current}
+//         } else {
+//            return {done: true}
+//         }
+//         //{done:true, value: 123}
+//      }
+//   }
+//}
+
+//for (let res of saleries) {
+//   console.log(res);
+//}
+
+//const iterator = saleries[Symbol.iterator]();
+//console.log(iterator.next());
+//console.log(iterator.next());
+//console.log(iterator.next());
+//console.log(iterator.next());
+
+//================ MAP ==========================================
