@@ -126,4 +126,52 @@
 //console.log(myAwesomeDB);
 
 //========== Descriptory =====================================
+//const birthday = Symbol('birthday');
 
+//const user = {
+//   name: 'Alex',
+//   surName: 'Smith',
+//   //birthday: '20/04/1993',
+//   [birthday]: '12.12.2012',
+//   showMyPublicData: function() {
+//      console.log(`${this.name} ${this.surName}`);
+//   }
+//}
+
+//Object.defineProperty(user, 'birthday', {writable: false});
+
+//Object.defineProperty(user, 'birthday', {value: prompt('Date?'), enumerable: true, configurable: true});
+
+//console.log(Object.getOwnPropertyDescriptor(user, 'name'));
+//Object.defineProperty(user, 'name', {writable: false});
+//Object.defineProperty(user, 'gender', {value: 'male'});
+//console.log(Object.getOwnPropertyDescriptor(user, 'gender'));
+//user.name = 'Ivan'; // TypeError 
+//console.log(user);
+// writable
+// enumerable
+// configurable
+
+//Object.defineProperty(user, 'showMyPublicData', {enumerable: false});
+//Object.getOwnPropertyDescriptors(user, [Symbol('birthday')]);
+//for (let key in user) console.log(key);
+
+//console.log(Object.getOwnPropertyDescriptor(Math, 'PI'));
+
+//Object.defineProperties(user, {
+//   name: {writable: false},
+//   surName: {writable:false}
+//})
+
+//=========== for of  ==========================================
+
+const user = {
+   name: 'Alex',
+   surName: 'Smith',
+   birthday: '20/04/1993',
+   showMyPublicData: function() {
+      console.log(`${this.name} ${this.surName}`);
+   }
+}
+
+const arr = ['a', 'b', 'c'];
