@@ -1,37 +1,14 @@
+script.js
 'use strict';
-// touchstart
-// touchmove
-// touchend
-// touchenter
-// touchleave
-// touchcancel
 
-window.addEventListener('DOMContentLoaded', () => {
-   const box = document.querySelector('.box');
-   
-   box.addEventListener('touchstart', (e) => {
-    e.preventDefault();
+const box = document.querySelector('.box');
 
-    //console.log('Start');
-    //console.log(e.touches);
-    console.log(e.targetTouches);
-    console.log(e.changedTouches);
-   })
-//    box.addEventListener('touchmove', (e) => {
-//        e.preventDefault();
-    
-//        console.log('Move');
-//       })
+const newHeight = 100;
+const newWidth = 400;
 
-//   box.addEventListener('touchend', (e) => {
-//    e.preventDefault();
+function changeParams(elem, h, w) {
+    elem.style.height = `${h}px`;
+    elem.style.width = `${w}px`;
+}
 
-//    console.log('End');
-//   })
-
-})
-
-//console.log('hi');
-// touches
-// targetTouches
-// changedTouches
+changeParams(box, newHeight, newWidth);
