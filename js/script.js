@@ -228,4 +228,164 @@
 //console.log(iterator.next());
 //console.log(iterator.next());
 
-//================ MAP ==========================================
+//================ MAP  SET========================================
+
+//function unique(arr) {
+//  const set = new Set(arr);
+//  return set;
+//}
+
+//let values = ["Hare", "Krishna", "Hare", "Krishna",
+//  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+//];
+
+//console.log( unique(values) ); // Hare,Krishna,:-O
+
+//function aclean(arr) {
+//  let map = new Map();
+
+//  for (let word of arr) {
+//    // разбиваем слово на буквы, сортируем и объединяем снова в строку
+//    let sorted = word.toLowerCase().split("").sort().join(""); // (*)
+//    map.set(sorted, word);
+//  }
+
+//  return Array.from(map.values());
+//}
+
+//let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+//console.log( aclean(arr) );
+
+
+//--------------------------------------------------------------
+
+//const user = {
+//   name: 'Alex',
+//   surName: 'Smith',
+//   birthday: '20/04/1993',
+//   showMyPublicData: function() {
+//      console.log(`${this.name} ${this.surName}`);
+//   }
+//}
+
+//const userMap = new Map(Object.entries(user));
+//console.log(userMap);
+
+//const newUserObj = Object.fromEntries(userMap);
+//console.log(newUserObj);
+////console.log(typeof(Object.keys(user)[0]));
+
+//const shops = [
+//  {rice: 200},
+//  {meat: 500},
+//  {oil: 239},
+//  {bread: 45}
+//];
+
+//const map = new Map([
+//  [{paper: 200}, 8900]
+//]);
+
+
+//const budjet = [72728, 7474674, 84656, 7463638];
+
+//shops.forEach((shop, ind) => {
+//   map.set(shop, budjet[ind]);
+//});
+//map.set(shops[0], 5000);
+//map.set(shops[1], 15000);
+//map.set(shops[2], 51200);
+
+//map.set(shops[0], 5000).set(shops[1], 40009).set(shops[2], 747323).set(shops[3], 73837);
+
+//console.log(map.get(shops[1])); // 7474674
+//console.log(map.has(shops[2])); // true
+//map.delete(key);
+//map.clear();
+//map.size;
+
+//map.keys();
+//const goods = [];
+//for (let shop of map.keys()) {
+//  console.log(shop);
+//}
+
+//{ paper: 200 }
+//{ rice: 200 }
+//{ meat: 500 }
+//{ oil: 239 }
+//{ bread: 45 }
+
+//for (let shop of map.keys()) {
+//  goods.push(Object.keys(shop)[0]);
+//}
+
+//console.log(goods);
+
+//for (let price of map.values()) {
+//  console.log(price);
+//}
+
+//for (let [shop, price] of map.entries()) {
+//  console.log(shop, price);
+//}
+
+//map.forEach((value, key, map) => {
+  //console.log(value);
+  //console.log(key);
+  //console.log(map);
+//})
+
+//const arr = [1, 2, 1, 3, 2, 4, 6, 7, 2, 1, 5];
+
+//const set = new Set(arr);
+//console.log(set);
+
+//const arrStudent = ['Alex', 'Oleg', 'Ann', 'Vasek', 'Alex', 'Oleg'];
+//const setStudent = new Set(arrStudent);
+
+//function unique(arr) {
+//  return Array.from(new Set(arr));
+//}
+
+//console.log(unique(arrStudent));
+//console.log(setStudent);
+
+//arrStudent.set('Ivan').set('Oleg');
+
+//setStudent.has('Ivan'); //true
+//setStudent.delete('Oleg');
+//setStudent.clear();
+//setStudent.size;
+
+//for (let value of setStudent) console.log(value);
+//setStudent.forEach((value,valueAgain, set) => {
+//  console.log(valueAgain);
+//})
+
+//console.log(setStudent.values());
+//console.log(setStudent.keys());
+//console.log(setStudent.entries());
+
+//=========================BigInt ========================
+
+//console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+
+//const bigint = 12348429250957058058305893028940249709797n;
+//const someBigint = BigInt(12348429250957058058305893028940249709797n);
+
+//console.log(typeof(bigint)); // bigint
+
+//console.log(Math.round(5.44n));  // Syntaksis error
+//console.log(3n + 2);  // TypeError
+//console.log(5n / 2n);  // 2n округляет в меньшую сторону
+
+//const bigint = 5n;
+//const number = 3;
+
+//console.log(bigint + BigInt(number));
+//console.log(number + Number(bigint));
+
+
+
