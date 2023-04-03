@@ -389,28 +389,89 @@
 
 //========================= TASK ========================================================
 
-function amountOfPages(summary){
-  //  if (summary < 10) {
-  //      return summary;
-  //  } else if (summary < 189) {
-  //      return (summary - 8);
-  //  } else { 
-  //    return (summary - 189) / 3; 
-  //}
+//function amountOfPages(summary){
+//  //  if (summary < 10) {
+//  //      return summary;
+//  //  } else if (summary < 189) {
+//  //      return (summary - 8);
+//  //  } else { 
+//  //    return (summary - 189) / 3; 
+//  //}
 
-    let result = '';
-    let num = 0;
+//    let result = '';
+//    let num = 0;
     
-    for (let i = 1; i <= summary; i++) {
-        result += i;
-        if (result.length === summary) {
-            num = i;
-            break;
-        }
-    }
-    return num;
+//    for (let i = 1; i <= summary; i++) {
+//        result += i;
+//        if (result.length === summary) {
+//            num = i;
+//            break;
+//        }
+//    }
+//    return num;
 
-}
+//}
 
-console.log(amountOfPages(25));
+//console.log(amountOfPages(25));
 
+
+//================= task pangramm =========================================================
+
+//function isPangram(string) {
+//    const alfabet = ['a', 'b', 'c', 'd', 'e', 'f', 'j', 'h', 'i', 'g', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    
+//    const arr = string.split('');
+//    const setArr = Array.from(new Set(arr)).sort();
+    
+//    for (let i = 0; i < alfabet.length; i++) {
+//        if (!setArr.includes(alfabet[i])) { 
+//            return false;
+//    }
+//  }
+//return true;
+//}
+
+//console.log(isPangram('The quick brown fox jumps over the lazy dog'));
+
+//// Вариант, когда строка переводится в нижний регистр до всех операций только 1 раз
+//// Это должно экономить ресурсы компьютера
+//function isPangram(string){
+//  string = string.toLowerCase();
+//  return "abcdefghijklmnopqrstuvwxyz".split("").every(function(x){
+//    return string.indexOf(x) !== -1;
+//  });
+//}
+
+//// С другим методом и строка каждый раз преобразовывается в коллбэке
+//function isPangram(string){
+//  return 'abcdefghijklmnopqrstuvwxyz'
+//    .split('')
+//    .every((x) => string.toLowerCase().includes(x));
+//}
+
+//// При помощи цикла
+//function isPangram(str) {
+//  letters: for (var c = 0; c < 26; c++) {
+//      for (let i = 0; i < str.length; i++) {
+//          let s = str.charCodeAt(i)
+//          if (s < 65 || s > 90 && s < 97 || s > 122) continue
+//          if (s === 65 + c || s === 97 + c) continue letters
+//      }
+    
+//      return false
+//  }
+  
+//  return true
+//}
+
+//// При помощи Set
+//function isPangram(string) {
+//  return new Set(string.toLocaleLowerCase().replace(/[^a-z]/gi, '').split('')).size === 26;
+//}
+
+//// С использованием регулярных выражений
+//function isPangram(string){
+//  return (string.match(/([a-z])(?!.*\1)/ig) || []).length === 26;
+//};
+
+//============= 3 task ===============================================
