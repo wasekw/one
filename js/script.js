@@ -492,4 +492,34 @@
 
 //================================ classList ...........=========================
 
+//let selectedTd;
 
+//table.onclick = function(event) {
+//  let target = event.target; // где был клик?
+
+//  if (target.tagName != 'TD') return; // не на TD? тогда не интересует
+
+//  highlight(target); // подсветить TD
+//};
+
+//function highlight(td) {
+//  if (selectedTd) { // убрать существующую подсветку, если есть
+//    selectedTd.classList.remove('highlight');
+//  }
+//  selectedTd = td;
+//  selectedTd.classList.add('highlight'); // подсветить новый td
+//}
+
+
+//Счётчик: <input type="button" value="1" data-counter>
+//Ещё счётчик: <input type="button" value="2" data-counter>
+
+//<script>
+//  document.addEventListener('click', function(event) {
+
+//    if (event.target.dataset.counter != undefined) { // если есть атрибут...
+//      event.target.value++;
+//    }
+
+//  });
+//</script>
