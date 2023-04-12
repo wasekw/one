@@ -175,12 +175,13 @@ tabsParent.addEventListener('click', function(event) {
   // Use CLASS
 
   class MenuCard {
-    constructor(src, alt, title, descrip, price, parentSelector) {
+    constructor(src, alt, title, descrip, price, parentSelector, ...classes) {
         this.src = src;
         this.alt = alt;
         this.title = title;
         this.descrip = descrip;
         this.price = price;
+        this.classes = classes;
         this.parent = document.querySelector(parentSelector);
         this.transfer = 38;
         this.changeToUAH();
@@ -192,6 +193,7 @@ tabsParent.addEventListener('click', function(event) {
 
     render() {
       const element = document.createElement('div');
+      this.classes.forEach(className => element.classList.add(className));
       element.innerHTML = `
             <div class="menu__item">
                 <img src=${this.src} alt=${this.alt}>
