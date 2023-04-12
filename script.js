@@ -261,15 +261,49 @@
 // console.log(obj.sum());
 
 
-function sayName(surName) {
-    console.log(this);
-    console.log(this.name + ' ' + surName);
-}
+// function sayName(surName) {
+//     console.log(this);
+//     console.log(this.name + ' ' + surName);
+// }
 
-const user = {
-    name: 'John'
-}
+// const user = {
+//     name: 'John'
+// }
 
 // sayName.call(user, 'Week');
 // sayName.apply(user, ['Week']);
 
+//======================================================================================
+
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+
+    calcArea() {
+        return this.height * this.width;
+    }
+}
+
+class ColoredRectangleWithText extends Rectangle {
+   constructor(height, width, text, bgColor) {
+    super(height, width);
+    this.text = text;
+    this.bgColor = bgColor;
+   }
+
+   showMyProps() {
+    console.log(`Текст: ${this.text}, Цвет: ${this.bgColor}`);
+   }
+}
+
+// const square = new Rectangle(10, 10);
+// const longRect = new Rectangle(200, 1898);
+
+// console.log(longRect.calcArea());
+// console.log(square.calcArea());
+
+const blueRect = new ColoredRectangleWithText(20, 40, 'This is my text for my jornal', 'blue');
+blueRect.showMyProps();
+console.log(blueRect.calcArea());
