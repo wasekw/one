@@ -275,28 +275,28 @@
 
 //======================================================================================
 
-class Rectangle {
-    constructor(height, width) {
-        this.height = height;
-        this.width = width;
-    }
+// class Rectangle {
+//     constructor(height, width) {
+//         this.height = height;
+//         this.width = width;
+//     }
 
-    calcArea() {
-        return this.height * this.width;
-    }
-}
+//     calcArea() {
+//         return this.height * this.width;
+//     }
+// }
 
-class ColoredRectangleWithText extends Rectangle {
-   constructor(height, width, text, bgColor) {
-    super(height, width);
-    this.text = text;
-    this.bgColor = bgColor;
-   }
+// class ColoredRectangleWithText extends Rectangle {
+//    constructor(height, width, text, bgColor) {
+//     super(height, width);
+//     this.text = text;
+//     this.bgColor = bgColor;
+//    }
 
-   showMyProps() {
-    console.log(`Текст: ${this.text}, Цвет: ${this.bgColor}`);
-   }
-}
+//    showMyProps() {
+//     console.log(`Текст: ${this.text}, Цвет: ${this.bgColor}`);
+//    }
+// }
 
 // const square = new Rectangle(10, 10);
 // const longRect = new Rectangle(200, 1898);
@@ -304,6 +304,32 @@ class ColoredRectangleWithText extends Rectangle {
 // console.log(longRect.calcArea());
 // console.log(square.calcArea());
 
-const blueRect = new ColoredRectangleWithText(20, 40, 'This is my text for my jornal', 'blue');
-blueRect.showMyProps();
-console.log(blueRect.calcArea());
+// const blueRect = new ColoredRectangleWithText(20, 40, 'This is my text for my jornal', 'blue');
+// blueRect.showMyProps();
+// console.log(blueRect.calcArea());
+
+//===================== ARGUMENTS  ==============================================
+
+// const log = function(a, b, ...rest) {
+//     console.log(a, b, rest);
+// }
+
+// log('operator', 'rest', 'usage', 'my', 'folowing', 'try');
+
+// function calcOrDouble(number, basic) {
+//     console.log(number * basic);
+// }
+
+// calcOrDouble(3, 5); // 15
+// calcOrDouble(3); // NaN
+
+// function calcOrDouble(number, basic) {
+//     basic = basic || 2;
+//     console.log(number * basic);
+// }
+
+// calcOrDouble(4);
+
+// function calcOrDouble(number, basic = 2) {
+//     console.log(number * basic);
+// }
