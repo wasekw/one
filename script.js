@@ -232,7 +232,7 @@
 
 //============================  THIS   ====================================
 
-'use strict';
+
 
 // function showThis(a, b) {
 //     // console.log(this);
@@ -333,3 +333,31 @@
 // function calcOrDouble(number, basic = 2) {
 //     console.log(number * basic);
 // }
+
+// ================= JSON  ===============================================
+
+'use strict';
+
+// const person = {
+//     name: 'Vasek',
+//     tel: '0950490641'
+// };
+
+// console.log(JSON.stringify(person)); // {"name":"Vasek","tel":"0950490641"}
+// console.log(JSON.parse(JSON.stringify(person))); // { name: 'Vasek', tel: '0950490641' }
+
+// const person = {
+//     name: 'Vasek',
+//     tel: '0950490641',
+//     parents: {
+//         mom: 'Olga',
+//         dad: 'Valek'
+//     }
+// };
+// const copyPerson = JSON.parse(JSON.stringify(person));
+// copyPerson.parents.mom = 'Julia'
+
+// console.log(copyPerson);
+// console.log(person);
+
+// ============== XMLHttpRequest ==========================================
