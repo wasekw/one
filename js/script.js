@@ -1,103 +1,38 @@
-window.addEventListener('DOMContentLoaded', function() {
+'use strict';
 
-  // Tabs
-  
-let tabs = document.querySelectorAll('.tabheader__item'),
-  tabsContent = document.querySelectorAll('.tabcontent'),
-  tabsParent = document.querySelector('.tabheader__items');
+const inputHrv =document.querySelector('#hrv');
+const inputUsd = document.querySelector('#usd');
+console.log(inputUsd);
 
-function hideTabContent() {
-      
-      tabsContent.forEach(item => {
-          item.classList.add('hide');
-          item.classList.remove('show', 'fade');
-      });
+inputHrv.addEventListener('input', () => {
+    const request = new XMLHttpRequest();
 
-      tabs.forEach(item => {
-          item.classList.remove('tabheader__item_active');
-      });
-}
+    // request.open(method, url, async, login, password);
+    request.open('GET', 'js/current.json');
+    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    request.send();
 
-function showTabContent(i = 0) {
-      tabsContent[i].classList.add('show', 'fade');
-      tabsContent[i].classList.remove('hide');
-      tabs[i].classList.add('tabheader__item_active');
-  }
-  
-  hideTabContent();
-  showTabContent();
+    // request.addEventListener('readystatechange', () => {
+    //     if (request.readyState === 4 && request.status === 200) {
+    //         // console.log(request.response);
+    //         const data = JSON.parse(request.response);
+    //         inputUsd.value = (+inputHrv.value / data.current.usd).toFixed(2);
+    //     } else {
+    //         inputUsd.value = 'Something wrong! Try late!';
+    //     }
+    // });
 
-tabsParent.addEventListener('click', function(event) {
-  const target = event.target;
-  if(target && target.classList.contains('tabheader__item')) {
-          tabs.forEach((item, i) => {
-              if (target == item) {
-                  hideTabContent();
-                  showTabContent(i);
-              }
-          });
-  }
-  });
-  
-  // Timer
+    request.addEventListener('load', () => {
+        if (request.status === 200) {
+            const data = JSON.parse(request.response);
+            inputUsd.value = (+inputHrv.value / data.current.usd).toFixed(2);
+        } else {
+            inputUsd.value = 'Something wrong! Try late!';
+        }
+    });
 
-  const deadLine = '2023-04-12';
-
-  function getTimeRemaining(endTime) {
-    let days, hours, minutes, seconds;
-    const t = Date.parse(endTime) - Date.parse(new Date());
-    if (t < 0) {
-      days = 0;
-      hours = 0;
-      minutes = 0;
-      seconds = 0;
-    } else {
-      days = Math.floor(t / (1000 * 60 * 60 * 24));
-      hours = Math.floor((t / (1000 * 60 * 60) % 24));
-      minutes = Math.floor((t / (1000 * 60) % 60));
-      seconds = Math.floor((t / 1000) % 60);
-    }
-   
-    console.log(t);
-    return {
-      'total': t,
-      'days': days,
-      'hours': hours,
-      'minutes': minutes,
-      'seconds': seconds
-    }
-  };
-
-  function getZero(num) {
-    if (num >= 0 && num < 10) {
-      return `0${num}`;
-    } else {
-      return num;
-    }
-  }
-
-  function setTimer(selector, endTime) {
-    const timer = document.querySelector(selector);
-    const days = timer.querySelector('#days');
-    const hours = timer.querySelector('#hours');
-    const minutes = timer.querySelector('#minutes');
-    const seconds = timer.querySelector('#seconds');
-    const timeInterval = setInterval(updateClock, 1000);
-  
-    function updateClock() {
-      const t = getTimeRemaining(endTime);
-      console.log(t);
-
-      days.innerHTML = getZero(t.days);
-      hours.innerHTML = getZero(t.hours);
-      minutes.innerHTML = getZero(t.minutes);
-      seconds.innerHTML = getZero(t.seconds);
-
-      if (t.total <= 0) {
-        clearInterval(timeInterval);
-      }
-    }
-    updateClock()
-  }
-  setTimer('.timer', deadLine);
+    // status
+    // statusText
+    // response
+    // readyState
 });
