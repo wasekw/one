@@ -6,6 +6,7 @@ console.log(inputUsd);
 
 inputHrv.addEventListener('input', () => {
     const request = new XMLHttpRequest();
+    console.dir(request);
 
     // request.open(method, url, async, login, password);
     request.open('GET', 'js/current.json');
