@@ -361,3 +361,10 @@
 // console.log(person);
 
 // ============== XMLHttpRequest ==========================================
+
+const formData = new FormData(SomeFormElement).entries();
+
+const jsonObject = formData.reduce((acc, [key, val]) => {
+  acc[key] = val;
+  return acc;
+}, {});
