@@ -34,12 +34,70 @@
 
 // ===================  JSONPLACEHOLDER =====================================================
 
-fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: "POST",
-  body: JSON.stringify({name: 'Vasek'}),
-  headers: {
-    'Content-type': 'application/json'
-  }
-})
-.then(response => response.json())
-.then(json => console.log(json));
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//   method: "POST",
+//   body: JSON.stringify({name: 'Vasek'}),
+//   headers: {
+//     'Content-type': 'application/json'
+//   }
+// })
+// .then(response => response.json())
+// .then(json => console.log(json));
+
+//================================= METHOD OF ARRAY =========================================
+
+// filter
+
+// const names = ['Ivan', 'Vasek', 'Olga', 'Anna', 'Voldemar', 'Darmidont'];
+
+// const shortName = names.filter(function(name) {
+//   return name.length < 5;
+// });
+// console.log(shortName);
+
+// const littleName = names.filter(el => el.length > 5);
+// console.log(littleName);
+
+// map
+
+// const answers = ['VaSeK', 'AnnA', 'DeNIs', 'JoHN'];
+
+// const lowerCaseAnswer = answers.map(el => el[0].toUpperCase() + el.slice(1).toLowerCase());
+// console.log(lowerCaseAnswer);
+
+// every/some
+
+// const some = [4, 'qwq', 'kfhkhiwqwwr'];
+// console.log(some.some(el => typeof(el) === 'number')); // true
+// console.log(some.every(el => typeof(el) === 'string'));   // false
+
+// reduce 
+
+// const arr = [4, 5, 2, 1, 6, 3];
+
+// const sumArr = arr.reduce((acc, el) => {
+//   return acc += el;
+// }, 0);
+
+// const sumArr = arr.reduce((acc, el) => acc += el, 0);
+// console.log(sumArr);
+
+// const arr = ['apple', 'banana', 'nuts', 'orange', 'pear']
+// const longStr = arr.reduce((acc, el) => acc += el, '');
+// console.log(longStr);
+
+//============ working with object ====================================================
+
+// const obj = {
+//   ivan: 'persone',
+//   ann: 'persone',
+//   dog: 'animal',
+//   cat: 'animal'
+// }
+
+// const newArr = Object.entries(obj).filter(name => name[1] === 'persone').map(el => el[0]);
+// const per = newArr.filter(name => name[1] === 'person')
+// console.log(newArr);
+
+// ==============  TASKS WITH METHOD FOR ARRAY ==============================================
+
