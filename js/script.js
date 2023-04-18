@@ -34,6 +34,12 @@
 
 // ===================  JSONPLACEHOLDER =====================================================
 
-fetch('https://jsonplaceholder.typicode.com/todos/2')
-      .then(response => response.json())
-      .then(json => console.log(json));
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: "POST",
+  body: JSON.stringify({name: 'Vasek'}),
+  headers: {
+    'Content-type': 'application/json'
+  }
+})
+.then(response => response.json())
+.then(json => console.log(json));
