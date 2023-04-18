@@ -269,6 +269,30 @@ window.addEventListener('DOMContentLoaded', function() {
               // form.append(statusMessage);
               form.insertAdjacentElement('afterend', statusMessage);
               
+              const formData = new FormData(form);
+
+              const object = {};
+
+              formData.forEach(function(value, key) {
+                object[key] = value;
+              });
+
+             
+              fetch('server.php', {
+                method: "POST",
+                headers: {
+                  'Content-type': 'application/json'
+                },
+                body: JSON.stringify(object)
+              }).then(data => data.text()).then(data => {
+                console.log(data);
+                showThanksModal(message.success);
+                statusMessage.remove();
+              }).catch(() => {
+                showThanksModal(message.failure);
+              }).finally(() => {
+                form.reset();
+              })
 
               // const request = new XMLHttpRequest();
               // request.open('POST', 'server.php');
@@ -329,11 +353,4 @@ window.addEventListener('DOMContentLoaded', function() {
       }
 });
 
-// fetch('https://jsonplaceholder.typicode.com/', {
-//   method: 'POST',
-//   body: JSON.stringify({name: 'Vasek'}),
-//   headers: {
-//     'Content-type': 'application/json'
-//   }
-// }).then(response => response.json())
-//   .then(json => console.log(json))
+
