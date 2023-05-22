@@ -241,6 +241,22 @@ tabsParent.addEventListener('click', function(event) {
     21,
      ".menu .container"
   ).render();
+
+   //    Forms
+
+    const forms = document.querySelectorAll('form');
+
+    function postData(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const request = new XMLHttpRequest();
+
+        });
+    }
+
+    console.log(11);
+
 });
 
 
